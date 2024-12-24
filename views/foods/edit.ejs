@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Edit <%= food.name %> </title>
+</head>
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= food.name %></h1>
+    <form action="/foods/<%=food._id%>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+      <input type="text" name="name" value="<%= food.name %>"/>
+      
+      <div class="checkbox-div">
+      <label for="isVegan">is Vegan?</label>
+      <input type="checkbox" name="isVegan" <% if (food.isVegan) { %>checked<% } %>/>
+      </div>
+      <!-- update the button text -->
+      <button type="submit">Update Food</button>
+    </form>
+    <a class="foods-index-link" href="/foods">  <div class="index-link-text">Back to Food </div></a>
+  </body>
+  
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Create a Food</title>
+</head>
+<body>
+
+    <h1>Create a New Food!</h1>
+    <form action="/foods" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <div class="checkbox-div">
+        
+            <label for="isVegan">It is Vegan?</label>
+            <input type="checkbox" name="isVegan" id="isVegan" />
+        </div>
+
+        <button type="submit">Add Food</button>
+      </form>
+      <a class="foods-index-link" href="/foods/">
+        <div class="index-link-text">
+        Back to Foods</div></a>
+</body>
+</html>
